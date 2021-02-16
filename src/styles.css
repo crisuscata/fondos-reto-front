@@ -1,0 +1,37 @@
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+
+@media (min-width: 1200px){
+    .slider-container{
+        width: 960px;
+    }
+}
+
+
+.carousel-control-next{
+    float: right;
+}
+
+.carousel-control-prev{
+    float: left;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    position: inherit;
+    display: inline-block;
+    background: #ccc;
+    padding: 10px;
+}
+
+.buttons-carousel{
+    height: 20px;
+    width: 100%;
+    
+}
+
+.card-body {
+    padding: 0.8rem;
+}

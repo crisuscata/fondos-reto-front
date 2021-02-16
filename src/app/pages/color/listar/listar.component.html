@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Colores <button (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;" >+</button>  </h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>COLOR</th>
+                        <th>PANTONE</th>
+                        <th>YEAR</th>
+                        <th>ACCION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let color of colores.datos;let i = index" class="text-center">
+                        <td><p class="card-text">{{i+1}} </p></td>
+                        <td> <p class="card-text">{{color.name}} </p></td>
+                        <td><p class="card-text">{{color.color}}</p></td>
+                        <td><p class="card-text">{{color.pantone}}</p></td>
+                        <td><p class="card-text">{{color.year}}</p></td>
+                        <td>
+                            <button (click)="Editar(color)" class="btn btn-warning" >
+                                Editar
+                            </button>
+                            <button (click)="Delete(color)"  class="btn btn-danger">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="container slider-container text-center my-3">
+  <div class="row mx-auto my-auto">
+      <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+
+           Bienvenido usuario: <b>{{rolUsuario}}</b>
+
+              <div [class]="divPage1">
+                  <div class="row">
+                      <div class="col-sm-4 mb-4" *ngFor="let colors of colores.datos.pagina1">
+                          <div class="card">
+                            <div class="card-body">
+                                <p class="text-left">{{colors.year}}</p> 
+                                <h4 class="card-title">{{colors.name}}</h4>
+                                <p class="card-text">{{colors.color}}</p>
+                                <p class="text-right">{{colors.pantone}}</p> 
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            
+              <div [class]="divOtherPage">
+                <div class="row">
+                    <div class="col-sm-4 mb-4" *ngFor="let colors of colores.datos.pagina2">
+                        <div class="card">
+                          <div class="card-body">
+                            <p class="text-left">{{colors.year}}</p> 
+                            <h4 class="card-title">{{colors.name}}</h4>
+                            <p class="card-text">{{colors.color}}</p>
+                            <p class="text-right">{{colors.pantone}}</p> 
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div [class]="divOtherPage">
+              <div class="row">
+                  <div class="col-sm-4 mb-4" *ngFor="let colors of colores.datos.pagina3">
+                      <div class="card">
+                        <div class="card-body">
+                            <p class="text-left">{{colors.year}}</p> 
+                            <h4 class="card-title">{{colors.name}}</h4>
+                            <p class="card-text">{{colors.color}}</p>
+                            <p class="text-right">{{colors.pantone}}</p> 
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+              
+
+          </div>
+          
+      </div>
+      
+  </div>
+  <div class="buttons-carousel">
+      <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
+          <span class="fa fa-chevron-left" aria-hidden="true"></span> Anterior
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
+          Siguiente <span class="fa fa-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</div>
